@@ -1,0 +1,66 @@
+:root{
+    --bgColor: black;
+    --ligthPurple: rgb(224, 190, 235);
+    --hoverPurple: rgba(208, 114, 237, 0.512);
+}
+
+
+@font-face {
+    font-family: techFont;
+    src: url(digital7.ttf);
+}
+
+/* body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+} */
+
+
+
+*{
+    font-family: techFont;
+    /* font-size: 40pt; */
+    background-color: black;
+    
+}
+
+#timeLeft{
+    color: rgb(20, 237, 78);
+    /* font-size: 200pt; */
+}
+
+
+button{
+
+    border-color: rgb(20, 237, 78);
+    color: rgb(20, 237, 78);
+
+}
+
+/* p{
+    margin: 0;
+    padding: 0;
+} */
+
+/* .btnContainer{
+
+    min-width:fit-content;
+    margin: 0;
+    display:flex;
+    justify-content: center;
+    gap: 6pt;
+
+    
+} */
+
+button {
+    transition-duration: 0.4s;
+}
+  
+button:hover {
+    background-color: rgba(20, 237, 78, 0.456);
+
+}

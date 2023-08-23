@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Pomodoro Timer</title>
+        <link rel='stylesheet' href='style.css' />
+        <link rel='stylesheet' href='pastelStyle.css'/>
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+
+        <div id="mainPageDiv">
+
+            <div id="chooseTimerDiv" class="btnContainer">
+                <button onclick="workSession()" id="workBtn">Work</button>
+                <button onclick="shortBreak()" id="shortBtn">Short Break</button>
+                <button onclick="longBreak()" id="longBtn">Long Break</button>
+            </div>
+            
+            <div id="clockDiv">
+                <p id = "timeLeft">25:00<p>
+            </div>
+
+            <div id="timerBtnsDiv" class="btnContainer">
+                <button id="startPauseBtn" onclick="startPauseTimer()">Start</button>
+                <!-- <button id="pauseContBtn" onclick="pauseTimer()">Pause</button> -->
+                <button id="resetBtn" onclick="resetTimer()">Reset</button>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
