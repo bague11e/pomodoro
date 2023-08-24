@@ -48,9 +48,11 @@ p{
     
 }
 
-/* button {
-    transition-duration: 0.4s;
+ button {
+    transition-duration: 0.2s;
 }
+
+/*
   
 button:hover {
     background-color: var(--hoverPurple);

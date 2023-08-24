@@ -1,5 +1,5 @@
 var workLength = 25 * 60;
-var shortLength = 5 * 60;
+var shortLength = 2 * 60;
 var longLength = 15 * 60;
 
 var chosenLength = workLength;
@@ -12,11 +12,29 @@ var runTimerFunction;
 
 var startPauseBtn;
 
+let notifPermission = false;      
+
+Notification.requestPermission().then(permission => {
+    if(permission === 'granted') {
+        new Notification("hola");
+        setPermission();
+     }
+    });
+
+
+
+function setPermission(){
+    notifPermission = true;
+}
+
+console.log(notifPermission);
+
 function workSession(){
     currentSession = "work";
     chosenLength = workLength;
     currentLength = workLength;
     newSession();
+    
 }
 
 function shortBreak(){
@@ -59,7 +77,12 @@ function startPauseTimer(){
 
 function startTimer(){
 
-    runTimerFunction = setInterval(runTimer, 1000);
+    if(notifPermission) {
+        new Notification('Hi, How are you?', {
+            body: 'Have a good day'
+        }); }
+
+    runTimerFunction = setInterval(runTimer, 10);
 
 }
 
@@ -69,7 +92,11 @@ function runTimer(){
         currentLength--;
         displayTime(currentLength);
     }
-    else clearInterval(runTimerFunction);
+    else {
+        clearInterval(runTimerFunction);
+        
+        
+    }
     
 }
 
